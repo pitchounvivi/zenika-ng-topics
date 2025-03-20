@@ -1,21 +1,24 @@
-<header class="app-root__header">
-  <h1>
-    <a routerLink="/"><i class="pi pi-bookmark"></i> User posts</a>
-  </h1>
+<ng-container *transloco="let t">
+  <header class="app-root__header">
+    <h1>
+      <a routerLink="/"><i class="pi pi-bookmark"></i>{{ t('appTitle') }}</a>
+    </h1>
 
-  <p-tag value="PrimeNG" />
+    <p-tag value="PrimeNG" />
 
-  <div class="app-root__actions">
-    <div><i class="pi pi-clock" style="margin-right: 0.25rem"></i> {{ now | date }}</div>
+    <div class="app-root__actions">
+      <div><i class="pi pi-clock" style="margin-right: 0.25rem"></i> {{ now | date }}</div>
 
-    <app-theme />
-  </div>
-</header>
+      <app-select-lang />
+      <app-theme />
+    </div>
+  </header>
 
-<app-nav class="app-root__sidenav" />
+  <app-nav class="app-root__sidenav" />
 
-<main class="app-root__main">
-  <router-outlet />
-</main>
+  <main class="app-root__main">
+    <router-outlet />
+  </main>
 
-<footer class="app-root__footer">Copyright &copy; Zenika</footer>
+  <footer class="app-root__footer">{{ t('copyright') }} &copy; Zenika</footer>
+</ng-container>
