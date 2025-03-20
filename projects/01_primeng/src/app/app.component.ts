@@ -11,7 +11,7 @@ import { SelectLangComponent } from "../../../02_transloco/src/app/select-lang/s
 @Component({
   selector: 'app-root',
   host: { class: 'app-root' },
-  imports: [DatePipe, RouterLink, RouterOutlet, TagModule, NavComponent, ThemeComponent, TranslocoDirective, TranslocoDatePipe, SelectLangComponent],
+  imports: [DatePipe, RouterLink, RouterOutlet, TagModule, NavComponent, ThemeComponent, TranslocoDirective, SelectLangComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   encapsulation: ViewEncapsulation.None,

@@ -11,7 +11,7 @@ import { ThemeService } from './theme/theme.service';
 import { TranslocoHttpLoader } from './transloco-loader';
 import { provideTransloco } from '@jsverse/transloco';
 import { TranslocoDirective } from '@jsverse/transloco';
-import { TranslocoDatePipe } from '@jsverse/transloco-locale';
+import { provideTranslocoLocale, TranslocoDatePipe } from '@jsverse/transloco-locale';
 
 
 export const appConfig: ApplicationConfig = {
@@ -43,5 +43,6 @@ export const appConfig: ApplicationConfig = {
       },
       loader: TranslocoHttpLoader
     }),
+    provideTranslocoLocale({ langToLocaleMapping: { en: 'en-US', fr: 'fr-FR' } }),
   ],
 };
