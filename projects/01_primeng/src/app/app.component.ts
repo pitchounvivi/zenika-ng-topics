@@ -4,6 +4,8 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { TagModule } from 'primeng/tag';
 import { NavComponent } from './nav/nav.component';
 import { ThemeComponent } from './theme/theme.component';
+import { TranslocoDirective } from '@jsverse/transloco';
+import { TranslocoDatePipe } from '@jsverse/transloco-locale';
 
 @Component({
   selector: 'app-root',
